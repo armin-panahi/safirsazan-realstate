@@ -1,0 +1,200 @@
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero{
+
+    position:relative;
+
+    padding-block:120px 80px;
+
+    overflow:hidden;
+
+}
+
+.hero__wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+
+    align-items:center;
+
+    gap:64px;
+
+}
+
+.hero__content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.hero__content .badge{
+
+    margin-bottom:24px;
+
+}
+
+.hero__content h1{
+
+    margin-bottom:24px;
+
+    max-width:620px;
+
+}
+
+.hero__content p{
+
+    max-width:560px;
+
+    margin-bottom:40px;
+
+}
+
+.hero__buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:56px;
+
+}
+
+.hero__stats{
+
+    display:flex;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero__image{
+
+    position:relative;
+
+}
+
+.hero__image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.floating-card{
+
+    position:absolute;
+
+    left:32px;
+
+    bottom:32px;
+
+    width:320px;
+
+}
+
+.floating-card__title{
+
+    margin:18px 0 12px;
+
+}
+
+.floating-card__info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    color:var(--color-text-light);
+
+}
+
+.floating-card__price{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+/* ==========================================================================
+   SEARCH SECTION
+   ========================================================================== */
+
+.search{
+
+    margin-top:-40px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.search-panel{
+
+    padding:32px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.search-panel__wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+    align-items:end;
+
+}
+
+.search-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.search-field label{
+
+    font-weight:600;
+
+    color:var(--color-text);
+
+}
+
+.search-btn{
+
+    height:56px;
+
+}
+
