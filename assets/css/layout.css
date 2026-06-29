@@ -1,0 +1,56 @@
+/* ==========================================================================
+   LAYOUT.CSS
+   ========================================================================== */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+.container{
+
+    width:min(
+    calc(100% - 48px),
+    var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+section{
+
+    padding-block:var(--section-space);
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}

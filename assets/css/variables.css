@@ -1,0 +1,83 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   ========================================================================== */
+
+:root{
+
+    /* ========= Colors ========= */
+
+    --color-primary:#B68D40;
+    --color-primary-dark:#9D7836;
+
+    --color-dark:#151515;
+
+    --color-white:#FFFFFF;
+
+    --color-background:#FAFAFA;
+
+    --color-surface:#FFFFFF;
+
+    --color-border:#ECECEC;
+
+    --color-text:#252525;
+
+    --color-text-light:#777777;
+
+    --color-success:#2E7D32;
+
+    --color-danger:#C62828;
+
+    /* ========= Container ========= */
+
+    --container-width:1200px;
+
+    /* ========= Radius ========= */
+
+    --radius-xs:8px;
+
+    --radius-sm:12px;
+
+    --radius-md:16px;
+
+    --radius-lg:24px;
+
+    --radius-xl:40px;
+
+    --radius-full:999px;
+
+    /* ========= Shadow ========= */
+
+    --shadow-sm:
+    0 6px 16px rgba(0,0,0,.06);
+
+    --shadow-md:
+    0 12px 40px rgba(0,0,0,.08);
+
+    --shadow-lg:
+    0 24px 80px rgba(0,0,0,.12);
+
+    /* ========= Transition ========= */
+
+    --transition-fast:.2s ease;
+
+    --transition:.35s ease;
+
+    --transition-slow:.5s ease;
+
+    /* ========= Header ========= */
+
+    --header-height:90px;
+
+    /* ========= Sections ========= */
+
+    --section-space:120px;
+
+    /* ========= Z-index ========= */
+
+    --z-header:999;
+
+    --z-dropdown:998;
+
+    --z-modal:9999;
+
+}
