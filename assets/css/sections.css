@@ -198,3 +198,1213 @@
 
 }
 
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
+.about{
+
+    padding-block:120px;
+
+}
+
+.about__wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.about__image{
+
+    position:relative;
+
+}
+
+.about__image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.about__content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.about__content .badge{
+
+    margin-bottom:24px;
+
+}
+
+.about__content h2{
+
+    margin-bottom:24px;
+
+    max-width:520px;
+
+}
+
+.about__content>p{
+
+    margin-bottom:40px;
+
+    max-width:580px;
+
+}
+
+.about__features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    width:100%;
+
+}
+
+.about__feature{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.about__feature h3{
+
+    margin-bottom:8px;
+
+}
+
+.about__actions{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-top:40px;
+
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+
+.services{
+
+    padding-block:120px;
+
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:32px;
+
+}
+
+.service-card{
+
+    text-align:center;
+
+    padding:40px 32px;
+
+    height:100%;
+
+}
+
+.service-card__icon{
+
+    margin-inline:auto;
+
+    margin-bottom:24px;
+
+}
+
+.service-card__title{
+
+    margin-bottom:16px;
+
+}
+
+.service-card__text{
+
+    margin-bottom:24px;
+
+    color:var(--color-text-light);
+
+}
+
+.service-card__link{
+
+    font-weight:600;
+
+    color:var(--color-primary);
+
+    transition:var(--transition);
+
+}
+
+.service-card__link:hover{
+
+    opacity:.85;
+
+}
+
+/* ==========================================================================
+   COMMON SECTION SPACING
+   ========================================================================== */
+
+.about,
+.services{
+
+    position:relative;
+
+}
+
+/* ==========================================================================
+   FEATURED PROPERTIES
+   ========================================================================== */
+
+.properties{
+
+    padding-block:120px;
+
+}
+
+.property-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:32px;
+
+}
+
+.property-card{
+
+    overflow:hidden;
+
+    padding:0;
+
+}
+
+.property-card__image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:4 / 3;
+
+}
+
+.property-card__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .5s ease;
+
+}
+
+.property-card:hover .property-card__image img{
+
+    transform:scale(1.08);
+
+}
+
+.property-card__badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:var(--radius-full);
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.property-card__favorite{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    background:var(--color-surface);
+
+    color:var(--color-text);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.property-card__favorite:hover{
+
+    transform:scale(1.08);
+
+    color:var(--color-primary);
+
+}
+
+.property-card__content{
+
+    padding:28px;
+
+}
+
+.property-card__title{
+
+    margin-bottom:14px;
+
+}
+
+.property-card__location{
+
+    margin-bottom:24px;
+
+    color:var(--color-text-light);
+
+}
+
+.property-card__features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+}
+
+.property-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 14px;
+
+    border-radius:var(--radius-md);
+
+    background:var(--color-background);
+
+    font-size:14px;
+
+    color:var(--color-text);
+
+}
+
+.property-card__footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding-top:24px;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+.property-price{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+.properties .text-center{
+
+    margin-top:64px;
+
+}
+
+/* ==========================================================================
+   WHY CHOOSE US
+   ========================================================================== */
+
+.why-us{
+
+    padding-block:120px;
+
+}
+
+.why-us__wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.why-us__content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.why-us__content .badge{
+
+    margin-bottom:24px;
+
+}
+
+.why-us__content h2{
+
+    margin-bottom:24px;
+
+    max-width:520px;
+
+}
+
+.why-us__content > p{
+
+    margin-bottom:40px;
+
+    max-width:580px;
+
+}
+
+.why-us__items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    width:100%;
+
+}
+
+.why-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.why-item h3{
+
+    margin-bottom:8px;
+
+}
+
+.why-us__image{
+
+    position:relative;
+
+}
+
+.why-us__image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ==========================================================================
+   PROCESS SECTION
+   ========================================================================== */
+
+.process{
+
+    padding-block:120px;
+
+}
+
+.process__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:32px;
+
+}
+
+.process-card{
+
+    position:relative;
+
+    padding:40px 32px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.process-card__number{
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.process-card h3{
+
+    margin-bottom:16px;
+
+}
+
+.process-card p{
+
+    color:var(--color-text-light);
+
+}
+
+.why-us,
+.process{
+
+    position:relative;
+
+}
+
+/* ==========================================================================
+   TESTIMONIALS
+   ========================================================================== */
+
+.testimonials{
+
+    padding-block:120px;
+
+}
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:32px;
+
+}
+
+.testimonial-card{
+
+    height:100%;
+
+}
+
+.testimonial-card__footer{
+
+    margin-top:auto;
+
+}
+
+.testimonial-card__stars{
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+}
+
+.testimonial-card__text{
+
+    line-height:2;
+
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq{
+
+    padding-block:120px;
+
+}
+
+.faq .accordion{
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+}
+
+.accordion__item{
+
+    border:1px solid var(--color-border);
+
+}
+
+.accordion__header{
+
+    user-select:none;
+
+}
+
+.accordion__header:hover{
+
+    background:var(--color-background);
+
+}
+
+.accordion__item.active .accordion__content{
+
+    max-height:300px;
+
+}
+
+.accordion__item.active .accordion__icon{
+
+    transform:rotate(45deg);
+
+}
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact{
+
+    padding-block:120px;
+
+}
+
+.contact__wrapper{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:48px;
+
+    align-items:start;
+
+}
+
+.contact .form{
+
+    padding:40px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.contact-card{
+
+    height:100%;
+
+}
+
+.contact-card__item{
+
+    width:100%;
+
+}
+
+.contact-card__text{
+
+    line-height:1.9;
+
+}
+
+.contact .btn{
+
+    align-self:flex-start;
+
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer{
+
+    padding-top:96px;
+
+    background:var(--color-dark);
+
+    color:var(--color-white);
+
+}
+
+.footer__top{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.2fr;
+
+    gap:48px;
+
+    padding-bottom:56px;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.footer__column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer__column h3{
+
+    margin-bottom:24px;
+
+    color:var(--color-white);
+
+}
+
+.footer__column p{
+
+    color:var(--color-text-light);
+
+    line-height:2;
+
+}
+
+.footer .logo{
+
+    color:var(--color-white);
+
+}
+
+.footer .social{
+
+    margin-top:32px;
+
+}
+
+.footer .social__link{
+
+    background:transparent;
+
+    border:1px solid var(--color-border);
+
+    color:var(--color-white);
+
+}
+
+.footer .social__link:hover{
+
+    background:var(--color-primary);
+
+    border-color:var(--color-primary);
+
+}
+
+.footer .footer-links{
+
+    gap:18px;
+
+}
+
+.footer .footer-link{
+
+    color:var(--color-text-light);
+
+}
+
+.footer .footer-link:hover{
+
+    color:var(--color-white);
+
+}
+
+.footer__bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding-block:28px;
+
+    color:var(--color-text-light);
+
+    font-size:14px;
+
+}
+
+/* ==========================================================================
+   SCROLL TO TOP
+   ========================================================================== */
+
+.scroll-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.scroll-top svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+.scroll-top:hover{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ==========================================================================
+   SECTION HELPERS
+   ========================================================================== */
+
+.hero,
+.about,
+.services,
+.properties,
+.why-us,
+.process,
+.testimonials,
+.faq,
+.contact{
+
+    scroll-margin-top:100px;
+
+}
+
+.section-title{
+
+    position:relative;
+
+}
+
+.section-title__heading{
+
+    margin-bottom:20px;
+
+}
+
+.section-title__description{
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================================================
+   SECTION LAYOUT HELPERS
+   ========================================================================== */
+
+.hero,
+.search,
+.about,
+.services,
+.properties,
+.why-us,
+.process,
+.testimonials,
+.faq,
+.contact,
+.footer{
+
+    position:relative;
+
+}
+
+.container > .section-title{
+
+    max-width:760px;
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================================================
+   GRID SPACING
+   ========================================================================== */
+
+.service-grid,
+.property-grid,
+.process__grid,
+.testimonial-grid{
+
+    align-items:stretch;
+
+}
+
+.property-grid > *,
+.service-grid > *,
+.process__grid > *,
+.testimonial-grid > *{
+
+    min-width:0;
+
+}
+
+/* ==========================================================================
+   IMAGE CONTAINERS
+   ========================================================================== */
+
+.hero__image,
+.about__image,
+.why-us__image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero__image img,
+.about__image img,
+.why-us__image img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ==========================================================================
+   CONTENT WIDTH
+   ========================================================================== */
+
+.hero__content,
+.about__content,
+.why-us__content{
+
+    min-width:0;
+
+}
+
+.hero__content > *,
+.about__content > *,
+.why-us__content > *{
+
+    width:100%;
+
+}
+
+/* ==========================================================================
+   PROPERTY SECTION
+   ========================================================================== */
+
+.properties .container,
+.services .container,
+.process .container,
+.testimonials .container{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.properties .text-center{
+
+    align-self:center;
+
+}
+
+/* ==========================================================================
+   CONTACT LAYOUT
+   ========================================================================== */
+
+.contact__wrapper > *{
+
+    min-width:0;
+
+}
+
+.contact__wrapper form{
+
+    width:100%;
+
+}
+
+/* ==========================================================================
+   FOOTER LAYOUT
+   ========================================================================== */
+
+.footer__column{
+
+    min-width:0;
+
+}
+
+.footer__bottom p{
+
+    margin:0;
+
+}
+
+/* ==========================================================================
+   END OF SECTION LAYOUT HELPERS
+   ========================================================================== */
+
+   /* ==========================================================================
+   FINAL SECTION LAYOUT
+   ========================================================================== */
+
+/* ============================================================
+   SECTION CONTAINERS
+============================================================ */
+
+.hero .container,
+.about .container,
+.services .container,
+.properties .container,
+.why-us .container,
+.process .container,
+.testimonials .container,
+.faq .container,
+.contact .container,
+.footer .container{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/* ============================================================
+   GRID CONSISTENCY
+============================================================ */
+
+.about__wrapper,
+.why-us__wrapper,
+.contact__wrapper,
+.hero__wrapper,
+.property-grid,
+.service-grid,
+.process__grid,
+.testimonial-grid{
+
+    width:100%;
+
+}
+
+.property-grid article,
+.service-grid article,
+.process__grid article,
+.testimonial-grid article{
+
+    height:100%;
+
+}
+
+/* ============================================================
+   IMAGE ALIGNMENT
+============================================================ */
+
+.hero__image,
+.about__image,
+.why-us__image{
+
+    overflow:hidden;
+
+}
+
+.hero__image figure,
+.about__image figure,
+.why-us__image figure{
+
+    margin:0;
+
+}
+
+/* ============================================================
+   SECTION ANCHOR OFFSET
+============================================================ */
+
+#hero,
+#about,
+#services,
+#properties,
+#why-us,
+#process,
+#testimonials,
+#faq,
+#contact{
+
+    scroll-margin-top:96px;
+
+}
+
+/* ============================================================
+   SAFE CONTENT FLOW
+============================================================ */
+
+.hero__content>*,
+.about__content>*,
+.why-us__content>*{
+
+    max-width:100%;
+
+}
+
+.footer__column>*{
+
+    max-width:100%;
+
+}
+
+/* ============================================================
+   PRINT SAFETY
+============================================================ */
+
+@media print{
+
+    .hero,
+    .about,
+    .services,
+    .properties,
+    .why-us,
+    .process,
+    .testimonials,
+    .faq,
+    .contact,
+    .footer{
+
+        padding-block:32px;
+
+    }
+
+}
+
+/* ==========================================================================
+   END OF FILE
+   ========================================================================== */
