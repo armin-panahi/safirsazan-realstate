@@ -1,0 +1,1359 @@
+/* ==========================================================
+   ANIMATION VARIABLES
+========================================================== */
+
+:root {
+
+    --animation-fast: .25s;
+    --animation-normal: .4s;
+    --animation-slow: .7s;
+
+    --ease-default: ease;
+    --ease-smooth: cubic-bezier(.4, 0, .2, 1);
+
+}
+
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+/* Fade Up */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Fade Down */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Fade Left */
+
+@keyframes fadeLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* Fade Right */
+
+@keyframes fadeRight {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* Scale */
+
+@keyframes scaleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* Floating */
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Pulse */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* Rotate */
+
+@keyframes rotate360 {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   DEFAULT TRANSITIONS
+========================================================== */
+
+a,
+button,
+input,
+textarea,
+select,
+.card,
+.property-card,
+.service-card,
+.process-card,
+.testimonial-card,
+.why-item,
+.stat-card,
+.icon-box,
+.social__link,
+.footer-link {
+
+    transition:
+        all var(--animation-normal)
+        var(--ease-smooth);
+
+}
+
+
+/* ==========================================================
+   REVEAL ANIMATIONS
+========================================================== */
+
+.fade-up {
+
+    animation: fadeUp .8s forwards;
+
+}
+
+.fade-down {
+
+    animation: fadeDown .8s forwards;
+
+}
+
+.fade-left {
+
+    animation: fadeLeft .8s forwards;
+
+}
+
+.fade-right {
+
+    animation: fadeRight .8s forwards;
+
+}
+
+.scale-in {
+
+    animation: scaleIn .7s forwards;
+
+}
+
+
+/* ==========================================================
+   FLOATING ELEMENTS
+========================================================== */
+
+.floating-card {
+
+    animation:
+
+        floating
+
+        4s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+/* Hero Image */
+
+.hero__image img {
+
+    animation:
+
+        scaleIn
+
+        1s
+
+        ease;
+
+}
+
+/* ==========================================================
+   BUTTON ANIMATIONS
+========================================================== */
+
+.btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform var(--animation-normal) var(--ease-smooth),
+        box-shadow var(--animation-normal) var(--ease-smooth),
+        background-color var(--animation-normal) var(--ease-smooth);
+
+}
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+
+}
+
+.btn:active {
+
+    transform: translateY(-1px) scale(.98);
+
+}
+
+.btn:focus-visible {
+
+    outline: 3px solid rgba(37, 99, 235, .25);
+
+    outline-offset: 4px;
+
+}
+
+
+/* ==========================================================
+   CARD ANIMATIONS
+========================================================== */
+
+.card {
+
+    transition:
+        transform .4s var(--ease-smooth),
+        box-shadow .4s var(--ease-smooth);
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 22px 55px rgba(15, 23, 42, .12);
+
+}
+
+
+/* ==========================================================
+   PROPERTY CARD
+========================================================== */
+
+.property-card {
+
+    overflow: hidden;
+
+}
+
+.property-card__image {
+
+    overflow: hidden;
+
+}
+
+.property-card__image img {
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.property-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.property-card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+.property-card__favorite {
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease;
+
+}
+
+.property-card__favorite:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+/* ==========================================================
+   SERVICE CARD
+========================================================== */
+
+.service-card {
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.service-card:hover {
+
+    transform:
+
+        translateY(-10px);
+
+}
+
+.service-card:hover .service-card__icon {
+
+    transform:
+
+        rotate(-10deg)
+
+        scale(1.1);
+
+}
+
+
+/* ==========================================================
+   PROCESS CARD
+========================================================== */
+
+.process-card {
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.process-card:hover {
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+.process-card__number {
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.process-card:hover .process-card__number {
+
+    transform:
+
+        scale(1.15);
+
+}
+
+
+/* ==========================================================
+   TESTIMONIAL CARD
+========================================================== */
+
+.testimonial-card {
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.testimonial-card:hover {
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+
+/* ==========================================================
+   WHY US ITEMS
+========================================================== */
+
+.why-item {
+
+    transition:
+
+        transform .35s ease,
+
+        background .35s ease;
+
+}
+
+.why-item:hover {
+
+    transform:
+
+        translateX(-8px);
+
+}
+
+
+/* ==========================================================
+   ICON BOX
+========================================================== */
+
+.icon-box {
+
+    transition:
+
+        transform .35s ease,
+
+        background .35s ease;
+
+}
+
+.icon-box:hover {
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+}
+
+
+/* ==========================================================
+   STAT CARDS
+========================================================== */
+
+.stat-card {
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.stat-card:hover {
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+
+/* ==========================================================
+   SOCIAL ICONS
+========================================================== */
+
+.social__link {
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease;
+
+}
+
+.social__link:hover {
+
+    transform:
+
+        translateY(-4px)
+
+        scale(1.08);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+
+    transition:
+        background-color .35s ease,
+        box-shadow .35s ease,
+        padding .35s ease;
+
+}
+
+.header.scrolled {
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
+
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+.nav__link {
+
+    position: relative;
+
+}
+
+.nav__link::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--color-primary);
+
+    transition: width .35s ease;
+
+}
+
+.nav__link:hover::after,
+
+.nav__link.active::after {
+
+    width: 100%;
+
+}
+
+
+/* ==========================================================
+   SEARCH PANEL
+========================================================== */
+
+.search-panel {
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.search-panel:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.input,
+.textarea,
+.select select {
+
+    transition:
+
+        border-color .3s ease,
+
+        box-shadow .3s ease,
+
+        background-color .3s ease;
+
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+
+}
+
+
+/* ==========================================================
+   CONTACT CARD
+========================================================== */
+
+.contact-card__item {
+
+    transition:
+
+        transform .35s ease,
+
+        background-color .35s ease;
+
+}
+
+.contact-card__item:hover {
+
+    transform: translateX(-8px);
+
+}
+
+
+/* ==========================================================
+   ACCORDION
+========================================================== */
+
+.accordion__item {
+
+    overflow: hidden;
+
+}
+
+.accordion__header {
+
+    cursor: pointer;
+
+    transition:
+
+        background-color .3s ease;
+
+}
+
+.accordion__header:hover {
+
+    background: rgba(15, 23, 42, .03);
+
+}
+
+.accordion__icon {
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.accordion__item.active .accordion__icon {
+
+    transform: rotate(45deg);
+
+}
+
+.accordion__content {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+
+        max-height .45s ease;
+
+}
+
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
+
+.scroll-top {
+
+    transition:
+
+        opacity .35s ease,
+
+        visibility .35s ease,
+
+        transform .35s ease;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+}
+
+.scroll-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.scroll-top:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   IMAGE HOVER
+========================================================== */
+
+.about__image,
+
+.why-us__image {
+
+    overflow: hidden;
+
+}
+
+.about__image img,
+
+.why-us__image img {
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.about__image:hover img,
+
+.why-us__image:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==========================================================
+   FOOTER LINKS
+========================================================== */
+
+.footer-link {
+
+    transition:
+
+        color .3s ease,
+
+        transform .3s ease;
+
+}
+
+.footer-link:hover {
+
+    transform: translateX(-6px);
+
+}
+
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title {
+
+    animation:
+
+        fadeUp .8s ease both;
+
+}
+
+/* ==========================================================
+   ANIMATION DELAY UTILITIES
+========================================================== */
+
+.delay-100 {
+
+    animation-delay: .1s;
+
+}
+
+.delay-200 {
+
+    animation-delay: .2s;
+
+}
+
+.delay-300 {
+
+    animation-delay: .3s;
+
+}
+
+.delay-400 {
+
+    animation-delay: .4s;
+
+}
+
+.delay-500 {
+
+    animation-delay: .5s;
+
+}
+
+.delay-600 {
+
+    animation-delay: .6s;
+
+}
+
+
+/* ==========================================================
+   HOVER UTILITIES
+========================================================== */
+
+.hover-lift {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.hover-lift:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.hover-scale {
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.hover-scale:hover {
+
+    transform: scale(1.04);
+
+}
+
+.hover-rotate {
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.hover-rotate:hover {
+
+    transform: rotate(-4deg);
+
+}
+
+
+/* ==========================================================
+   IMAGE UTILITIES
+========================================================== */
+
+.img-zoom {
+
+    overflow: hidden;
+
+}
+
+.img-zoom img {
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.img-zoom:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge {
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+.badge:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   PROPERTY STATUS
+========================================================== */
+
+.property-status,
+
+.property-card__badge {
+
+    transition:
+
+        transform .3s ease;
+
+}
+
+.property-card:hover .property-card__badge,
+
+.floating-card:hover .property-status {
+
+    transform: scale(1.08);
+
+}
+
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.loading {
+
+    pointer-events: none;
+
+    opacity: .7;
+
+}
+
+.loading::after {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 18px;
+
+    height: 18px;
+
+    margin-inline-start: 10px;
+
+    border: 2px solid currentColor;
+
+    border-right-color: transparent;
+
+    border-radius: 50%;
+
+    animation:
+
+        rotate360 .7s linear infinite;
+
+}
+
+
+/* ==========================================================
+   SKELETON
+========================================================== */
+
+@keyframes skeleton {
+
+    0% {
+
+        opacity: .5;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: .5;
+
+    }
+
+}
+
+.skeleton {
+
+    animation:
+
+        skeleton 1.4s ease infinite;
+
+}
+
+
+/* ==========================================================
+   DISABLE ANIMATION
+========================================================== */
+
+.no-animation {
+
+    animation: none !important;
+
+    transition: none !important;
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   GPU OPTIMIZATION
+========================================================== */
+
+.card,
+
+.property-card,
+
+.service-card,
+
+.process-card,
+
+.hero__image img,
+
+.floating-card,
+
+.btn,
+
+.icon-box,
+
+.stat-card {
+
+    will-change: transform;
+
+    backface-visibility: hidden;
+
+    transform: translateZ(0);
+
+}
+
+/* ==========================================================
+   PROPERTY PRICE
+========================================================== */
+
+.property-price {
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+.property-card:hover .property-price {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+
+    transition:
+        transform .35s ease;
+
+}
+
+.logo:hover {
+
+    transform: scale(1.03);
+
+}
+
+.logo__icon {
+
+    transition:
+        transform .4s ease;
+
+}
+
+.logo:hover .logo__icon {
+
+    transform: rotate(-10deg);
+
+}
+
+
+/* ==========================================================
+   HERO BUTTONS
+========================================================== */
+
+.hero__buttons .btn:first-child:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+}
+
+.hero__buttons .btn:last-child:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   FORM BUTTON
+========================================================== */
+
+.form .btn {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.form .btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   CONTACT ICONS
+========================================================== */
+
+.contact-card__icon {
+
+    transition:
+        transform .35s ease;
+
+}
+
+.contact-card__item:hover .contact-card__icon {
+
+    transform: scale(1.12);
+
+}
+
+
+/* ==========================================================
+   SMOOTH SECTION ENTRANCE
+========================================================== */
+
+.hero,
+.about,
+.services,
+.properties,
+.why-us,
+.process,
+.testimonials,
+.faq,
+.contact,
+.footer {
+
+    animation:
+        fadeUp .8s ease both;
+
+}
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection {
+
+    background: rgba(37, 99, 235, .2);
+
+    color: inherit;
+
+}
+
+
+/* ==========================================================
+   SCROLL BEHAVIOR
+========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+/* ==========================================================
+   FINAL PERFORMANCE TWEAKS
+========================================================== */
+
+img {
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+}
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
