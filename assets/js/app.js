@@ -156,3 +156,240 @@ handleHeaderScroll();
 
 handleScrollTopButton();
 
+/* ==========================================================
+   CONTACT FORM VALIDATION
+========================================================== */
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name");
+        const phone = document.getElementById("phone");
+        const email = document.getElementById("email");
+        const subject = document.getElementById("subject");
+        const message = document.getElementById("message");
+
+        const fields = [name, phone, email, subject, message];
+
+        let isValid = true;
+
+        fields.forEach(field => {
+
+            field.classList.remove("input-error");
+
+            if (!field.value.trim()) {
+
+                field.classList.add("input-error");
+
+                isValid = false;
+
+            }
+
+        });
+
+        if (!isValid) {
+
+            alert("لطفاً تمامی فیلدها را تکمیل کنید.");
+
+            return;
+
+        }
+
+        const phoneRegex = /^09\d{9}$/;
+
+        if (!phoneRegex.test(phone.value.trim())) {
+
+            phone.classList.add("input-error");
+
+            alert("شماره موبایل معتبر نیست.");
+
+            return;
+
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email.value.trim())) {
+
+            email.classList.add("input-error");
+
+            alert("ایمیل معتبر نیست.");
+
+            return;
+
+        }
+
+        alert("پیام شما با موفقیت ثبت شد.");
+
+        contactForm.reset();
+
+    });
+
+}
+
+
+/* ==========================================================
+   REMOVE ERROR ON INPUT
+========================================================== */
+
+document.querySelectorAll(".input, .textarea").forEach(input => {
+
+    input.addEventListener("input", () => {
+
+        input.classList.remove("input-error");
+
+    });
+
+});
+
+/* ==========================================================
+   CLOSE MENU ON OUTSIDE CLICK
+========================================================== */
+
+document.addEventListener("click", (event) => {
+
+    if (!nav || !menuBtn) return;
+
+    const clickedInsideNav = nav.contains(event.target);
+    const clickedMenuBtn = menuBtn.contains(event.target);
+
+    if (
+        nav.classList.contains("nav--open") &&
+        !clickedInsideNav &&
+        !clickedMenuBtn
+    ) {
+
+        nav.classList.remove("nav--open");
+        menuBtn.classList.remove("is-active");
+
+    }
+
+});
+
+
+/* ==========================================================
+   FORM LOADING STATE
+========================================================== */
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function () {
+
+        const submitBtn = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        if (!submitBtn) return;
+
+        submitBtn.classList.add("loading");
+
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+
+            submitBtn.classList.remove("loading");
+
+            submitBtn.disabled = false;
+
+        }, 1200);
+
+    });
+
+}
+
+
+/* ==========================================================
+   WINDOW RESIZE
+========================================================== */
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 992) {
+
+        nav?.classList.remove("nav--open");
+
+        menuBtn?.classList.remove("is-active");
+
+    }
+
+});
+
+
+/* ==========================================================
+   PASSIVE SCROLL EVENTS
+========================================================== */
+
+window.addEventListener(
+    "scroll",
+    handleHeaderScroll,
+    { passive: true }
+);
+
+window.addEventListener(
+    "scroll",
+    handleScrollTopButton,
+    { passive: true }
+);
+
+
+/* ==========================================================
+   PAGE LOADED
+========================================================== */
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+/* ==========================================================
+   INITIALIZATION
+========================================================== */
+
+function init() {
+
+    handleHeaderScroll();
+
+    handleScrollTopButton();
+
+}
+
+init();
+
+
+/* ==========================================================
+   PREVENT EMPTY LINKS
+========================================================== */
+
+document.querySelectorAll('a[href="#"]').forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        event.preventDefault();
+
+    });
+
+});
+
+
+/* ==========================================================
+   SAFE CONSOLE MESSAGE
+========================================================== */
+
+console.log(
+    "%cReal Estate Website v1.0",
+    "color:#2563eb;font-size:16px;font-weight:bold;"
+);
+
+console.log(
+    "%cDeveloped with HTML CSS JavaScript",
+    "color:#64748b;font-size:13px;"
+);
+
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
