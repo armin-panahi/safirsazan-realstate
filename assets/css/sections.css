@@ -36,8 +36,10 @@
 
 .hero__content .badge{
 
-    margin-bottom:24px;
-
+    margin-bottom:20px;
+    width:35%;
+    padding: 0.2rem 0;
+    font-size:1rem;
 }
 
 .hero__content h1{
@@ -46,6 +48,10 @@
 
     max-width:620px;
 
+}
+
+.hero__content h1 > span {
+    color: #B68D40;
 }
 
 .hero__content p{

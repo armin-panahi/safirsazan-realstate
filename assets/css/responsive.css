@@ -189,6 +189,9 @@
 
         text-align:center;
 
+        display: flex;
+        justify-content: center;
+
     }
 
     .hero__content{
@@ -198,6 +201,8 @@
     }
 
     .hero__image{
+
+        display: none;
 
         order:1;
 
@@ -224,6 +229,8 @@
     }
 
     .floating-card{
+
+        /* display: none; */
 
         right:50%;
 
@@ -685,6 +692,10 @@
 
         height:42px;
 
+    }
+
+    .btn--primary {
+        display: none;
     }
 
     /* Hero */

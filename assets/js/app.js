@@ -380,14 +380,15 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 ========================================================== */
 
 console.log(
-    "%cReal Estate Website v1.0",
-    "color:#2563eb;font-size:16px;font-weight:bold;"
+    "%cDeveloped by :",
+    "color:#white;font-size:15px;"
 );
 
 console.log(
-    "%cDeveloped with HTML CSS JavaScript",
-    "color:#64748b;font-size:13px;"
+    "%cARMIN PANAHI & AMIRREZA AREZOMAND",
+    "color:#B68D40;font-size:16px;font-weight:bold;"
 );
+
 
 
 /* ==========================================================
